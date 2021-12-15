@@ -1,13 +1,15 @@
 import { useEffect, useState } from "react";
 import "./App.css";
 import CardContainer from "./components/CardContainer";
-import { robots } from "./api/robots";
+import axios from "axios";
 
 function App() {
-  const [search, setSearch] = useState();
+  const [search, setSearch] = useState("");
   const [robs, setRobs] = useState([]);
   useEffect(() => {
-    setRobs(robots);
+    axios
+      .get("https://jsonplaceholder.typicode.com/users")
+      .then((data) => setRobs(data.data));
   }, []);
   const handleSearch = (e) => {
     setSearch(e.target.value);
