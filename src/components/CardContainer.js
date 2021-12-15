@@ -1,13 +1,7 @@
-import React, { useEffect, useState } from "react";
-import { robots } from "../api/robots";
 import Card from "./Card";
 import "./CardContainer.css";
 
-const CardContainer = () => {
-  const [robs, setRobs] = useState([]);
-  useEffect(() => {
-    setRobs(robots);
-  }, []);
+const CardContainer = ({ robs }) => {
   return (
     <div className="cardContainer">
       {robs.map((rob) => {

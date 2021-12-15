@@ -5,3 +5,32 @@ body {
     rgba(8, 77, 124, 0.9962359943977591) 100%
   );
 }
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+@font-face {
+  font-family: "SEGA LOGO FONT";
+  font-style: normal;
+  font-weight: normal;
+  src: local("SEGA LOGO FONT"), url("SEGA.woff") format("woff");
+}
+
+.title {
+  font-family: "SEGA LOGO FONT";
+  font-weight: 200;
+  color: #0ccac4;
+  font-size: 40px;
+}
+.input {
+  width: 200px;
+  height: 40px;
+  border-radius: 5px;
+  background-color: rgb(151, 223, 233);
+  border: none;
+}
+.input:focus {
+  outline: none;
+}
