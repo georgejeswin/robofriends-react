@@ -1,0 +1,28 @@
+@font-face {
+  font-family: "SEGA LOGO FONT";
+  font-style: normal;
+  font-weight: normal;
+  src: local("SEGA LOGO FONT"), url("SEGA.woff") format("woff");
+}
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.title {
+  font-family: "SEGA LOGO FONT";
+  font-weight: 200;
+  color: #0ccac4;
+  font-size: 50px;
+}
+.input {
+  width: 200px;
+  height: 40px;
+  border-radius: 5px;
+  background-color: rgb(151, 223, 233);
+  border: none;
+}
+.input:focus {
+  outline: none;
+}
