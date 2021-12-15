@@ -27,7 +27,11 @@ function App() {
         onChange={(e) => handleSearch(e)}
         value={search}
       />
-      <CardContainer robs={fiteredRobots} />
+      {robs.length ? (
+        <CardContainer robs={fiteredRobots} />
+      ) : (
+        <h1>Loading..</h1>
+      )}
     </div>
   );
 }
