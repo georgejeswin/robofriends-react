@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import "./App.css";
 import CardContainer from "./components/CardContainer";
 import axios from "axios";
+import Scroll from "./components/Scroll";
 
 function App() {
   const [search, setSearch] = useState("");
@@ -28,9 +29,11 @@ function App() {
         value={search}
       />
       {robs.length ? (
-        <CardContainer robs={fiteredRobots} />
+        <Scroll>
+          <CardContainer robs={fiteredRobots} />
+        </Scroll>
       ) : (
-        <h1>Loading..</h1>
+        <h1 className="title">Loading..</h1>
       )}
     </div>
   );
